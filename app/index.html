@@ -10,24 +10,20 @@
 
 </head>
 
-<body>
-    <ul>
-        <li>
-            <span>Nexus S</span>
-            <p>
-                Fast just got faster with Nexus S.
-            </p>
-        </li>
-        <li>
-            <span>Motorola XOOM™ with Wi-Fi</span>
-            <p>
-                The Next, Next Generation tablet.
-            </p>
-        </li>
-    </ul>
+<body ng-app="phonecatApp">
+
+    <div ng-controller="PhoneListController">
+        <ul>
+            <li ng-repeat="phone in phones">
+                <span>{{phone.name}}</span>
+                <p>{{phone.snippet}}</p>
+            </li>
+        </ul>
+    </div>
 
 
     <script src="lib/angular/angular.js"></script>
+    <script src="app.module.js"></script>
 </body>
 
 </html>
