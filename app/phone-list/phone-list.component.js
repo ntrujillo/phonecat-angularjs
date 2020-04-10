@@ -1,13 +1,7 @@
 angular
-    .module('phonecatApp')
+    .module('phoneList')
     .component('phoneList', {  // This name is what AngularJS uses to match to the `<phone-list>` element.
-        template:
-            `<ul>
-          <li ng-repeat="phone in $ctrl.phones">
-            <span>{{phone.name}}</span>
-            <p>{{phone.snippet}}</p>
-          </li>
-        </ul>`,
+        templateUrl:'phone-list/phone-list.template.html',
         controller: PhoneListController
     });
 
